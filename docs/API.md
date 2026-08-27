@@ -37,3 +37,19 @@
 | `safetyPermitApproved` | boolean | 作业许可已批准 |
 
 接口统一返回 `ApiResponse`；业务冲突使用 HTTP 409，参数错误使用 400，未认证使用 401，无权限使用 403。
+
+## 专业设施运维接口
+
+| 方法 | 路径 | 说明 |
+| --- | --- | --- |
+| GET | `/api/facility-ops/dashboard` | 设施、工单和服务请求总览 |
+| POST | `/api/facility-ops/assets` | 登记设施资产 |
+| POST | `/api/admin/facility-ops/assets/{id}/activate` | 启用资产 |
+| POST | `/api/facility-ops/assets/{id}/plans` | 建立保养计划 |
+| POST | `/api/facility-ops/plans/{id}/work-orders` | 生成维护工单 |
+| POST | `/api/facility-ops/work-orders/{id}/assign` | 分派工单 |
+| POST | `/api/facility-ops/work-orders/{id}/start` | 开始作业 |
+| POST | `/api/facility-ops/work-orders/{id}/complete` | 提交完工与设备读数 |
+| POST | `/api/admin/facility-ops/work-orders/{id}/accept` | 完工验收 |
+| POST | `/api/facility-ops/service-requests` | 受理设施服务请求 |
+| POST | `/api/facility-ops/sla/escalate` | 执行 SLA 超时升级 |

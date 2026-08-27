@@ -67,3 +67,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。
 | ![微信咨询二维码一](docs/images/zhuatech-wechat-consulting.png) | ![微信咨询二维码二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：企业不动产与设施管理系统、IWMS系统源码、企业数字化、Java企业系统、Vue管理系统、知华科技、上海如静知华信息科技有限公司。
+
+## V2.0 专业设施运维域
+
+新增设施资产、预防性保养计划、维护工单、完工验收与服务 SLA 模型。工单按照分派、开工、完工、验收推进，设备读数禁止回退；P1—P4 服务请求按优先级自动计算时限并支持超时升级。前端“设施运维中心”和 `/api/facility-ops` 接口提供专业入口。

@@ -1,0 +1,3 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
+package cn.zhuatech.iwms.deep;import cn.zhuatech.iwms.common.ApiResponse;import jakarta.validation.Valid;import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/api/admin/facility-ops") public class DeepAdminController{private final DeepDomainService s;public DeepAdminController(DeepDomainService s){this.s=s;}@PostMapping("/assets/{id}/activate")ApiResponse<?> activate(@PathVariable Long id){return ApiResponse.ok(s.activate(id));}@PostMapping("/work-orders/{id}/accept")ApiResponse<?> accept(@PathVariable Long id,@Valid @RequestBody DeepDomainService.AcceptRequest r){return ApiResponse.ok(s.accept(id,r));}}
